@@ -46,5 +46,22 @@ public class Product {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
+	
+	public void currentStockAfterSales(int quantitySale) {
+		int currentStock = stock;
+		int finalStock = 0;
+		
+		finalStock = currentStock - quantitySale;
+		setStock(finalStock);
+		
+	}
+	
+	public void restocking(int newStock) {
+		int currentStock = stock;
+		int finalStock = 0;
+		
+		finalStock = currentStock + newStock;
+		setStock(finalStock);
+	}
 
 }
