@@ -9,11 +9,11 @@ public class Product {
 	
 	public Product(int code, String name, float price, int stock)throws Exception {
 
-		if (code==0)
+		if (code<=0)
 			throw new Exception();
 		if (name.equals(""))
 			throw new Exception();
-		if (price == 0)
+		if (price <= 0)
 			throw new Exception();
 		
 		this.code = code;
