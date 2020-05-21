@@ -2,8 +2,8 @@ package domain;
 
 public class Product {
 	
-	protected int code;
-	protected String name;
+	protected  int code;
+	protected  String name;
 	protected float price;
 	protected int stock;
 	
