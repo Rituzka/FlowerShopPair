@@ -7,22 +7,22 @@ import domain.Product;
 
 public class Repository {
 
-	static ArrayList <Product> items= new ArrayList <Product>();
+	static List <Product> items= new ArrayList <Product>();
 	
 	public Repository() {
 	
 	}
 
-	public static  ArrayList<Product> getItems() {
+	public static  List<Product> getItems() {
 		return items;
 	}
 
-	public static  void addItems(Product items) throws Exception {
+	public static void addItems(Product item) throws Exception {
 		
-		if (items==null)
+		if (item==null)
 			throw new Exception();
 		
-		((List<Product>) items).add(items);
+		   items.add(item);
 				
 	}
 	
