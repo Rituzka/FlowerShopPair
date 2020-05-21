@@ -4,7 +4,7 @@ public class Flower extends Product {
 	
 	String color;
 
-	public Flower(int code, String name, String nameProduct, float price, int stock, String color) {
+	public Flower(int code, String name, String nameProduct, float price, int stock, String color)throws Exception {
 		
 		super( code,  name,  price,  stock);
 		this.color=color;

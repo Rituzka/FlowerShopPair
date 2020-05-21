@@ -7,7 +7,15 @@ public class Product {
 	protected float price;
 	protected int stock;
 	
-	public Product(int code, String name, float price, int stock) {
+	public Product(int code, String name, float price, int stock)throws Exception {
+
+		if (code==0)
+			throw new Exception();
+		if (name.equals(""))
+			throw new Exception();
+		if (price == 0)
+			throw new Exception();
+		
 		this.code = code;
 		this.name= name;
 		this.price = price;

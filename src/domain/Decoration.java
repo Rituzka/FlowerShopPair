@@ -4,7 +4,7 @@ public class Decoration extends Product  {
 	
 	String material;
 
-	public Decoration(int code, String name,String nameProduct, float price, int stock, String material) {
+	public Decoration(int code, String name,String nameProduct, float price, int stock, String material) throws Exception {
 		
 		super( code,  name,  price,  stock);
 		

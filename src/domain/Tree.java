@@ -3,9 +3,8 @@ package domain;
 public class Tree extends Product {
 	float height;
 
-	public Tree(int code, String name, String nameProduct, float price, int stock, float height) {
-		
-		super( code,  name,  price,  stock);
+	public Tree(int code, String name, String nameProduct, float price, int stock, float height) throws Exception {
+		super(code, name, price, stock);
 		this.height=height;
 	}
 
