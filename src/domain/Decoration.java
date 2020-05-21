@@ -9,6 +9,10 @@ public class Decoration extends Product  {
 		super( code,  name,  price,  stock);
 		
 		this.material=material;
+		
+		if (material.equalsIgnoreCase("") && !material.equalsIgnoreCase("wood") && !material.equalsIgnoreCase("plastic"));        
+			throw new Exception();
+		
 	}
 
 	public  String getMaterial() {

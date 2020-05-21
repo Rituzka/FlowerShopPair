@@ -9,6 +9,8 @@ public class Flower extends Product {
 		super( code,  name,  price,  stock);
 		this.color=color;
 
+		if (color.equalsIgnoreCase(""));
+		throw new Exception();
 
 		
 	}
