@@ -6,8 +6,9 @@ public class Product {
 	protected  String name;
 	protected double price;
 	protected int stock;
+	protected String category;
 	
-	public Product(int code, String name, double price, int stock)throws Exception {
+	public Product(int code, String name, double price, int stock, String category)throws Exception {
 
 		if (code<=0)
 			throw new Exception();
@@ -20,6 +21,7 @@ public class Product {
 		this.name= name;
 		this.price = price;
 		this.stock = stock;
+		this.category = category;
 		
 	}
 
@@ -54,6 +56,11 @@ public class Product {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
+	
+	public String getCategory() {
+		return category;
+	}
+	
 	
 	public void currentStockAfterSales(int quantitySale) {
 		int currentStock = stock;
