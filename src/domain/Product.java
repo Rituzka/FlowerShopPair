@@ -4,10 +4,10 @@ public class Product {
 	
 	protected  int code;
 	protected  String name;
-	protected float price;
+	protected double price;
 	protected int stock;
 	
-	public Product(int code, String name, float price, int stock)throws Exception {
+	public Product(int code, String name, double price, int stock)throws Exception {
 
 		if (code<=0)
 			throw new Exception();
@@ -39,11 +39,11 @@ public class Product {
 		this.name = name;
 	}
 
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(float price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
