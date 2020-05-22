@@ -6,7 +6,8 @@ public class Tree extends Product {
 	public Tree(int code, String name, double price, int stock, double height) throws Exception {
 		super(code, name, price, stock);
 		
-		if(height<=0) throw new Exception();
+		if(height<=0)
+			throw new Exception();
 	
 		this.height = height;
 	}

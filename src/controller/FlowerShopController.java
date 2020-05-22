@@ -1,5 +1,6 @@
 package controller;
 
+
 import domain.*;
 import persistence.Repository;
 
@@ -7,7 +8,7 @@ import persistence.Repository;
 public class FlowerShopController {
 	
 	private String name;
-	Repository listProducts = new Repository();
+	//Repository allProducts = new Repository();
 	
 	
 	public FlowerShopController(String name){
@@ -22,19 +23,32 @@ public class FlowerShopController {
 		this.name = name;
 	}
 	
-	public void createTree(int code, String name, double price, int stock,  double height) throws Exception {
-		Tree tree = new Tree(code, name, price, stock, height);
+	public Tree createTree(Tree tree, int code, String name, double price, int stock, double height) throws Exception {
+		tree = new Tree(code, name, price, stock, height);
 		Repository.addItems(tree);	
+		return tree;
 	}
 	
-	public void createFlower(int code, String name, double price, int stock,  String color) throws Exception {
-		Flower flower = new Flower(code, name, price, stock, color);
-		Repository.addItems(flower);	
+	public Flower createFlower(Flower flower, int code, String name, double price, int stock, String color) throws Exception {
+	    flower = new Flower(code, name, price, stock, color);
+		Repository.addItems(flower);
+		return flower;
 	}
 	
-	public void createDecoration(int code, String name, double price, int stock,  String material) throws Exception {
-		Decoration deco = new Decoration(code, name, price, stock, material);
+	public Decoration createDecoration(Decoration deco, int code, String name, double price, int stock, String material) throws Exception {
+		deco = new Decoration(code, name, price, stock, material);
 		Repository.addItems(deco);	
+		return deco;
 	}
 	
+	public String getCurrentStocks() {
+		String currentStocks = "";
+		for (Product p: Repository.getItems() ) {
+		currentStocks = "STOCK ACTUAL: producto: "+ p.getName() +", stock: "+p.getStock();
+		
+		System.out.println(currentStocks);
+		
+		}
+		return currentStocks;
+	}
 }

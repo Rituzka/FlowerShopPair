@@ -6,13 +6,11 @@ public class Flower extends Product {
 
 	public Flower(int code, String name, double price, int stock, String color)throws Exception {
 		
-		super( code,  name,  price,  stock);
-		this.color=color;
-
-		if (color.equalsIgnoreCase(""));
-		throw new Exception();
-
+		super(code, name, price, stock);
+		if (color.equals(""))
+		throw new Exception();	
 		
+		this.color = color;
 	}
 
 	public  String getColor() {

@@ -6,11 +6,11 @@ public class Decoration extends Product  {
 
 	public Decoration(int code, String name, double price, int stock, String material) throws Exception {
 		
-		super( code,  name,  price,  stock);
+		super(code, name, price, stock);
 		
 		this.material=material;
 		
-		if (material.equalsIgnoreCase("") && !material.equalsIgnoreCase("wood") && !material.equalsIgnoreCase("plastic"));        
+		if (material.equalsIgnoreCase("") && !material.equalsIgnoreCase("wood") && !material.equalsIgnoreCase("plastic"))       
 			throw new Exception();
 		
 	}
