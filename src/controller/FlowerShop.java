@@ -3,12 +3,12 @@ package controller;
 import domain.*;
 import persistence.Repository;
 
-public class FlowerShopController {
+public class FlowerShop {
 
 	private String name;
 	// Repository allProducts = new Repository();
 
-	public FlowerShopController(String name) {
+	public FlowerShop(String name) {
 		this.name = name;
 	}
 
@@ -44,7 +44,7 @@ public class FlowerShopController {
 	public String getCurrentStocks() {
 		String currentStocks = "";
 		for (Product p : Repository.getItems()) {
-			currentStocks = "STOCK ACTUAL: producto: " + p.getName() + ", stock: " + p.getStock();
+			currentStocks = "Producto: " + p.getName() + ", stock actual: " + p.getStock();
 
 			System.out.println(currentStocks);
 
@@ -78,9 +78,9 @@ public class FlowerShopController {
 			}
 		}
 
-		currentStockDeco = "Categoría: deco, " + "stock: " + newStockDeco;
-		currentStockFlower = "Categoría: flower, " + "stock: " + newStockFlower;
-		currentStockTree = "Categoría: tree, " + "stock: " + newStockTree;
+		currentStockDeco = "Categoría: deco, " + "stock actual: " + newStockDeco;
+		currentStockFlower = "Categoría: flower, " + "stock actual: " + newStockFlower;
+		currentStockTree = "Categoría: tree, " + "stock actual: " + newStockTree;
 
 		System.out.println(currentStockTree + "\n" + currentStockFlower + "\n" + currentStockDeco);
 

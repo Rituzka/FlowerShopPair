@@ -1,18 +1,18 @@
 package main;
 
-import controller.FlowerShopController;
+import controller.FlowerShop;
 import domain.Decoration;
 import domain.Flower;
 import domain.Tree;
 
 public class FlowerShopMain {
 	
-	static FlowerShopController flowershop = new FlowerShopController("The BestFlower Shop");
-	static Flower rosa;
-	static Tree pino;
-	static Decoration decoPlastic;
-	static Flower jasmin;
-	static Tree abeto;
+	private static FlowerShop flowershop = new FlowerShop("The BestFlower Shop");
+	private static Flower rosa;
+	private static Tree pino;
+	private static Decoration decoPlastic;
+	private static Flower jasmin;
+	private static Tree abeto;
 
 	
 	public static void main(String[] args)throws Exception {
@@ -27,7 +27,7 @@ public class FlowerShopMain {
 		
 		System.out.println("STOCK POR PRODUCTO");
 		
-		//show current stock of each products
+		//show current stock of each product
 		flowershop.getCurrentStocks();
 		
 		System.out.println("\n"+"STOCK POR CATEGORÍA");
